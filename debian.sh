@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #############################################
-# Install vps for indonesian phreak
+# Install vps Untuk Semua Orang
 # Debian 7
-# By ww.fb.com/ardi85
+# Kodok Bahenol
 #############################################
 
 export DEBIAN_FRONTEND=noninteractive
@@ -378,7 +378,7 @@ fi
 	clear
 
 echo ""
-echo "OpenVPN sudah terinstall http://$MYIP:81/client.tar atau /root/client.tar"
+echo "OpenVPN sudah terinstall http://$MYIP:81/client.tar.gz atau /root/client.tar.gz"
 echo ""
 } # End function 
 
