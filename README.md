@@ -1,0 +1,2 @@
+# debian
+auto setup
