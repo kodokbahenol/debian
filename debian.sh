@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #############################################
-# Seting Vps Untuk Semua Orang
+# Install vps for indonesian phreak
 # Debian 7
-# By Kodok Bahenol
+# By ww.fb.com/ardi85
 #############################################
 
 export DEBIAN_FRONTEND=noninteractive
@@ -366,9 +366,10 @@ END
 	cat ca.crt >> $CLIENT.ovpn
 	echo -e "</ca>\n" >> $CLIENT.ovpn
 
-	tar -czf ../ovpn-$CLIENT.tar.gz $CLIENT.conf ca.crt $CLIENT.ovpn
+	tar -czf ../ovpn-$CLIENT.tar.gz ca.crt $CLIENT.ovpn
 	cd ~/
 	rm -rf ovpn-$CLIENT
+    cp client.tar.gz /home/vps/public_html/    
 	echo ""
 	echo "Selesai!"
 	echo ""
