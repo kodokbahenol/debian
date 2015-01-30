@@ -1,0 +1,104 @@
+#!/bin/bash
+#  Menu Uji coba
+if [ ! -n "$1" ]; then
+    echo ""
+    echo -e  "\033[35;1mPilih dari opsi di bawah untuk menggunakan script ini: \033[0m"
+
+    echo -n "$0"
+    echo -ne "\033[36m basic\033[0m"
+    echo     " - Install basic (jalankan ini untuk pertama kali)"
+
+    echo -n "$0"
+    echo -ne "\033[36m nginx\033[0m"
+    echo     " - Install nginx webserver http://$MYIP:81"
+
+    echo -n  "$0"
+    echo -ne "\033[36m vnstat\033[0m"
+    echo     " - Install vnstat need nginx"
+
+    echo -n "$0"
+    echo -ne "\033[36m screenfetch\033[0m"
+    echo     " - Install screenfetch"
+
+    echo -n "$0"
+    echo -ne "\033[36m openvpn\033[0m"
+    echo     " - Install openvpn tcp port 1194"
+
+    echo -n "$0"
+    echo -ne "\033[36m badvpn\033[0m"
+    echo     " - Install badvpn"
+
+    echo -n "$0"
+    echo -ne "\033[36m mrtg\033[0m"
+    echo     " - Install mrtg need nginx"
+
+    echo -n "$0"
+    echo -ne "\033[36m openssh\033[0m"
+    echo     " - Install openssh port 22, 80, 143"
+
+    echo -n "$0"
+    echo -ne "\033[36m dropbear\033[0m"
+    echo     " - Install dropbear port 109, 110, 443"
+
+    echo -n "$0"
+    echo -ne "\033[36m fail2ban\033[0m"
+    echo     " - Install fail2ban"
+
+    echo -n "$0"
+    echo -ne "\033[36m webmin\033[0m"
+    echo     " - Install webmin"
+
+    echo -n "$0"
+    echo -ne "\033[36m squid\033[0m"
+    echo     " - Install squid 3 limit ip"
+
+    echo -n "$0"
+    echo -ne "\033[36m pptp\033[0m"
+    echo     " - Install pptpd vpn"
+
+    echo ""
+    exit
+fi
+# End Show Menu
+
+case $1 in
+basic)
+    setup_basic
+    ;;
+nginx)
+    setup_nginx
+    ;;
+vnstat)
+    setup_vnstat
+    ;;
+screenfetch)
+    setup_screenfetch
+    ;;
+openvpn)
+    setup_openvpn
+    ;;
+badvpn)
+    setup_badvpn
+    ;;
+mrtg)
+	setup_mrtg
+    ;;
+openssh)
+    setup_openssh
+    ;;
+dropbear)
+    setup_dropbear
+    ;;
+fail2ban)
+    setup_fail2band
+    ;;
+squid)
+    setup_squid
+    ;;
+webmin)
+    setup_webmin
+    ;;
+pptp)
+    setup_pptp
+    ;;
+esac
